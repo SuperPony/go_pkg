@@ -1,2 +1,5 @@
 # go_pkg
-用于记录日常开发中一些常用的第三方库
+
+# Index
+
+- tail: 文件内容读取 `go get github.com/hpcloud/tail/...`
