@@ -2,7 +2,8 @@
 
 # Index
 
-- tail: 文件内容读取 `go get github.com/hpcloud/tail/...`
+- tail: 常驻模式进行文件内容追踪
+  - 获取 `go get github.com/hpcloud/tail/...`
 - fresh: 项目热更新
-  1. `github.com/pilu/fresh`
-  2. CMD `fresh`
+  - 获取 `github.com/pilu/fresh`
+  - 使用 CMD 下 `fresh`
