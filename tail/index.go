@@ -30,6 +30,7 @@ func main() {
 	// 	}
 	// }(ch, t)
 
+	// t.Lines 保存着每一条的数据集
 	for line := range t.Lines {
 		/*
 			type Line struct {
