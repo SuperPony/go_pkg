@@ -16,6 +16,7 @@ limitations under the License.
 package cmd
 
 import (
+	"errors"
 	"fmt"
 
 	"github.com/spf13/cobra"
@@ -46,6 +47,12 @@ var startCmd = &cobra.Command{
 	// 在 Run 之前执行
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
 		fmt.Println("PersistentPreRun")
+	},
+
+	// 结尾是 E 的钩子函数返回一个 error，当 error 不为空时，则中断运行，并输出错误信息
+	PreRunE: func(cmd *cobra.Command, args []string) error {
+		return errors.New("PreRunE Error")
+		// return nil
 	},
 
 	// args 保存着 cmd 的 Arguments

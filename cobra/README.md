@@ -71,6 +71,12 @@ var startCmd = &cobra.Command{
 		fmt.Println("PersistentPreRun")
 	},
 
+	// 结尾是 E 的钩子函数返回一个 error，当 error 不为空时，则中断运行，并输出错误信息
+	PreRunE: func(cmd *cobra.Command, args []string) error {
+		return errors.New("PreRunE Error")
+		// return nil
+	},
+
 	// args 保存着 cmd 的 Arguments
 	// flag 的 Argument 保存在对应的变量或通过 Flages().GetType(name) 获取
 	Run: func(cmd *cobra.Command, args []string) {
@@ -83,7 +89,7 @@ func init() {
 	rootCmd.AddCommand(startCmd)
 
 	// Type 系列用于注册当前 cmd 的 flags, --name
-	// TypeP --name -shorthand
+	// TypeP --name --shorthand
 	startCmd.Flags().StringP("port", "p", "9090", "启动端口")
 	// 获取指定 flag 输入的值
 	// startCmd.Flags().GetString("key")
