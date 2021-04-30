@@ -89,7 +89,7 @@ func init() {
 	rootCmd.AddCommand(startCmd)
 
 	// Type 系列用于注册当前 cmd 的 flags, --name
-	// TypeP --name --shorthand
+	// TypeP --name -shorthand
 	startCmd.Flags().StringP("port", "p", "9090", "启动端口")
 	// 获取指定 flag 输入的值
 	// startCmd.Flags().GetString("key")
