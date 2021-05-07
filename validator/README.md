@@ -15,7 +15,7 @@
 
 # 常用内置验证规则
 
-| 字段                 | 描述                                                                        | 示例                                                                     |
+| 标记                 | 描述                                                                        | 示例                                                                     |
 | -------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | required             | 必填                                                                        | Field 或 Struct validate:"required"                                      |
 | omitempty            | 空时忽略                                                                    | Field 或 Struct validate:"omitempty"                                     |
@@ -79,6 +79,7 @@
 | datetime             | 字符串值是否包含有效的 日期                                                 | Field validate:"datetime"                                                |
 
 # 基本使用
+
 ```
 package main
 
@@ -122,6 +123,7 @@ func example() {
 ```
 
 # 自定义验证
+
 ```
 package main
 
@@ -172,7 +174,6 @@ func customValidationExample() {
 	fmt.Println("success")
 }
 ```
-
 
 # 错误信息转中文
 
