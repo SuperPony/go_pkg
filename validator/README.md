@@ -104,7 +104,7 @@ var (
 	}
 )
 
-func main() {
+func example() {
 	if err := validate.Struct(d); err != nil {
 		for _, v := range err.(validator.ValidationErrors) {
 			// v.Field() 表示验证失败的字段
