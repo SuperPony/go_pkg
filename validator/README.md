@@ -89,10 +89,10 @@ import (
 )
 
 type Data struct {
-	Name       string `json:"name,omitempty" db:"name" validate:"required" label:"姓名"`
-	Age        uint   `json:"age,omitempty" db:"age" validate:"gte=0,lte=100" label:"年龄"`
-	Password   string `json:"password,omitempty" db:"password" validate:"required,alphanum,min=6" label:"密码"`
-	RePassword string `json:"re_password,omitempty" db:"re_password"  validate:"eqfield=Password" label:"重密密码"`
+	Name       string `validate:"required" label:"姓名"`
+	Age        uint   `validate:"gte=0,lte=100" label:"年龄"`
+	Password   string `validate:"required,alphanum,min=6" label:"密码"`
+	RePassword string `validate:"eqfield=Password" label:"重密密码"`
 }
 
 var (
@@ -148,10 +148,10 @@ func MyValidation(fl validator.FieldLevel) bool {
 func customValidationExample() {
 
 	type tmp struct {
-		Name       string `json:"name,omitempty" db:"name" validate:"required,myValidation"`
-		Age        uint   `json:"age,omitempty" db:"age" validate:"gte=0,lte=100"`
-		Password   string `json:"password,omitempty" db:"password" validate:"required,alphanum,min=6"`
-		RePassword string `json:"re_password,omitempty" db:"re_password"  validate:"eqfield=Password"`
+		Name       string `validate:"required,myValidation"`
+		Age        uint   `validate:"gte=0,lte=100"`
+		Password   string `validate:"required,alphanum,min=6"`
+		RePassword string `validate:"eqfield=Password"`
 	}
 
 	t := &tmp{
@@ -191,10 +191,10 @@ import (
 )
 
 type Data struct {
-	Name       string `json:"name,omitempty" db:"name" validate:"required" label:"姓名"`
-	Age        uint   `json:"age,omitempty" db:"age" validate:"gte=0,lte=100" label:"年龄"`
-	Password   string `json:"password,omitempty" db:"password" validate:"required,alphanum,min=6" label:"密码"`
-	RePassword string `json:"re_password,omitempty" db:"re_password"  validate:"eqfield=Password" label:"重密密码"`
+	Name       string `validate:"required" label:"姓名"`
+	Age        uint   `validate:"gte=0,lte=100" label:"年龄"`
+	Password   string `validate:"required,alphanum,min=6" label:"密码"`
+	RePassword string `validate:"eqfield=Password" label:"重密密码"`
 }
 
 var (
