@@ -118,7 +118,6 @@ func example() {
 	}
 
 	fmt.Println("success")
-	// registerTagNameExample()
 }
 ```
 
