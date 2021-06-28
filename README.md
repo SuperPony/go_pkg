@@ -5,3 +5,4 @@
 - tail: 常驻模式进行文件内容追踪
 - validator：验证器
 - viper: 配置管理工具
+- gorm: go 下面的全功能 ORM
